@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basis Data</title>
+    <link rel="stylesheet" href="Database.css">
+</head>
+<body>
+    <div class="tugas">
+        <h1>Tugas Basis Data</h1>
+        <p>Ini adalah tugas untuk mata kuliah Basis Data.</p>
+        <p>Nama: Muhammad Habibi Rahman <br>NIM: 24416255201005 <br> Kelas: IF24E</p>
+        <button><a href="https://ubpkarawang.ac.id/">Kunjungi UBP Karawang</a></button>
+        <div class="posts">
+            <button><a href="#harapan">Post 1</a></button>
+            <button><a href="#basis-data">Post 2</a></button>
+            <button><a href="#konseptual-db">Post 3</a></button>
+            <button><a href="#physical-model">Post 4</a></button>
+        </div>
+    </div>
+    <div class="harapan" id="harapan">
+        <h1>Harapan pada matakuliah Basis Data</h1>
+        <p>Saya berharap dengan mengikuti matakuliah Basis Data, saya dapat memahami konsep dasar dan lanjutan tentang basis data, termasuk bagaimana merancang, mengelola, dan mengoptimalkan basis data untuk berbagai aplikasi. Saya juga berharap dapat menguasai penggunaan sistem manajemen basis data (DBMS) populer seperti MySQL, PostgreSQL, atau Oracle, serta memahami bahasa query seperti SQL untuk melakukan operasi pada basis data. Selain itu, saya ingin belajar tentang keamanan basis data dan praktik terbaik dalam pengelolaan data untuk memastikan integritas dan ketersediaan informasi.</p>
+    </div>
+    <div class="basis-data" id="basis-data">
+        <h1>Apa itu Basis Data?</h1>
+        <p>Basis data adalah kumpulan data yang terorganisir dan disimpan secara sistematis sehingga dapat diakses, dikelola, dan diperbarui dengan mudah. Basis data digunakan untuk menyimpan informasi dalam berbagai format, seperti teks, angka, gambar, atau video, dan memungkinkan pengguna untuk melakukan operasi seperti pencarian, penyisipan, pembaruan, dan penghapusan data. Basis data biasanya dikelola oleh sistem manajemen basis data (DBMS) yang menyediakan antarmuka untuk berinteraksi dengan data dan memastikan integritas serta keamanan informasi yang disimpan.</p>
+    </div>
+    <div class="konseptual-db" id="konseptual-db">
+        <h1>Apa itu konseptual DB?</h1>
+        <p>Konseptual DB adalah model data yang menggambarkan struktur logis dari basis data tanpa mempertimbangkan bagaimana data tersebut diimplementasikan secara fisik. Model ini berfokus pada hubungan antar data dan aturan yang mengatur data tersebut, sehingga memudahkan perancang basis data untuk memahami dan merancang sistem yang efisien. Dalam model konseptual, entitas, atribut, dan relasi antar entitas didefinisikan dengan jelas, sehingga menjadi dasar bagi pengembangan skema basis data yang lebih rinci.</p>
+    </div>
+    <div class="physical-model" id="physical-model">
+        <h1>Apa itu Physical model</h1>
+        <p>Physical model adalah representasi konkret dari struktur basis data yang menggambarkan bagaimana data disimpan secara fisik di dalam sistem penyimpanan, seperti hard disk atau SSD. Model ini mencakup detail teknis tentang bagaimana tabel, indeks, dan file diatur untuk mengoptimalkan kinerja akses data, serta bagaimana data diorganisir untuk meminimalkan waktu respon dan penggunaan sumber daya. Physical model juga mempertimbangkan aspek seperti partisi data, kompresi, dan strategi backup untuk memastikan efisiensi dan keamanan penyimpanan data.</p>
+    </div>
+    <script>
+        // Animasi fade-in saat slide masuk viewport
+        function revealSlides() {
+            const slides = document.querySelectorAll('.tugas, .harapan, .basis-data, .konseptual-db, .physical-model');
+            const windowHeight = window.innerHeight;
+            slides.forEach(slide => {
+                const slideTop = slide.getBoundingClientRect().top;
+                if (slideTop < windowHeight - 100) {
+                    slide.classList.add('slide-visible');
+                }
+            });
+        }
+        window.addEventListener('scroll', revealSlides);
+        window.addEventListener('load', revealSlides);
+    </script>
+</body>
+</html>
